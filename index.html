@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://getbootstrap.com/docs/4.0/examples/starter-template/ -->
+<html lang="en" style="
+    direction: rtl;
+">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+  <title>حاسبة الجمل </title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./css/starter-template.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">حاسبة الجمل </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">الرئيسية <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./char_light.html">حاسبة الطبائع</a>
+        </li>
+
+ 
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="ابحث هنا عن اي شئ " aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">بحث</button>
+      </form>
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+
+
+    
+<!-- 
+    <div class="starter-template">
+      <h1>Bootstrap starter template</h1>
+      <p class="lead" id="elhome-container">{{message}}</p>
+      <div id="app-2">
+        <span v-bind:title="message">
+          Hover your mouse over me for a few seconds
+          to see my dynamically bound title!
+        </span>
+      </div>
+
+      <div id="app-3">
+        <span v-if="seen">Now you see me</span>
+      </div>
+
+      <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+      </div>
+
+
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+
+
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+
+-->
+
+<div class="row" >
+
+
+
+  <div class="col-md-4">
+    <h6 class="text-right">زيارجات </h6>
+    <ul class="list-group  text-right">
+      <li class="list-group-item"> <a href="char_light.html">حاسبة الطبائع</a></li>
+      <li class="list-group-item"> <a href="dynamic_gafr.html">جفر الايات</a></li>
+      <li class="list-group-item"><a>زيارجة كوكبة المراتب</a></li>
+      <li class="list-group-item"><a>زيارجة كوكبة طبائع المراتب</a></li>
+    </ul>
+  
+  
+  </div>
+  
+
+<div class="mb-3 text-right col-md-8" id="goml_gafr">
+  <h1>حساب الجمل</h1>
+  <p>حساب الجمّل: وهو حساب من وضع العرب قبل الميلاد بقرون؛ فعندما وضعوا الأبجدية جعلوا ترتيب حروفها على الصورة الآتية: (أ، ب، ج، د، هـ، و، ز، ح، ط، ي، ك، ل، م، ن، س، ع، ف، ص، ق، ر، ش، ت، ث، خ، ذ، ض، ظ، غ). ثم جعلوا لكل حرف من هذه الحروف قيمة عددية وفق الآتي:أ=1 ب=2 ج=3 د=4 هـ=5 و=6 ز=7 ح=8 ط=9 ي=10 ك=20 ل=30 م=40 ن=50 س=60 ع=70 ف=80 ص=90 ق=100 ر=200 ش=300 ت=400 ث=500 خ=600 ذ=700 ض=800 ظ=900 غ=1000</p>
+  <label for="exampleFormControlTextarea1" class="form-label">اكتب جملتك هنا كاملة</label>
+  <textarea class="form-control" v-on:keyup="logger" ref="textboxObj" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+  <br>
+  <div class=" text-right">
+    
+    <label for="exampleFormControlInput1" class="form-label"> عدد الحروف   : <span class="text-primary font-weight-bold" ref="char_len" >{{ char_len }}</span></label>
+
+    <label for="exampleFormControlInput1" class="form-label"> عدد الحروف النادرة   : <span class="text-primary font-weight-bold" ref="unique_char_len" >{{ unique_char_len }}</span></label>
+
+    <br>
+    <label for="exampleFormControlInput1" class="form-label"> الجمل الصغير  : <span class="text-primary font-weight-bold" ref="goml_small" >{{ goml_small_value }}</span></label>
+
+    <label for="exampleFormControlInput1" class="form-label"> الجمل الكبير  : <span class="text-primary font-weight-bold" ref="goml_large" >{{ goml_large_value }}</span></label>
+  <br>
+    <label for="exampleFormControlInput1" class="form-label"> الجمل الامازيغي الصغير  : <span class="text-primary font-weight-bold" ref="goml_small_amz" >{{ goml_small_value_amz }}</span></label>
+
+    <label for="exampleFormControlInput1" class="form-label"> الجمل الامازيغي الكبير  : <span class="text-primary font-weight-bold" ref="goml_large_amz" >{{ goml_large_value_amz }}</span></label>
+  
+  
+  
+  </div>
+  
+
+
+</div>
+ 
+
+</div>
+
+    </div>
+
+  </main><!-- /.container -->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/vue.js"></script>
+  <script src="js/vue/scripts/gametria_goml.js"></script>
+  <script src="./js/vue/elzero.js"></script>
+
+
+
+</body>
+
+</html>
