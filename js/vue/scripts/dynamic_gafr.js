@@ -109,9 +109,23 @@ numbers_goml_small_seq['غ'] = 28
 
 
 
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
 
 
+function backlistofchar_getlistofnumbers(numbers_goml_small, list) {
+  list_of_chars = []
+  for (var i = 0; i < list.length; i++) {
+    try {
+      list_of_chars.push(getKeyByValue(numbers_goml_small_seq,list[i]))
 
+    } catch {
+    }
+  }
+  return list_of_chars
+
+}
 
 
 
@@ -123,6 +137,8 @@ function getlistofchar_backlistofnumbers(numbers_goml_small, list) {
   list_of_numbers = []
   for (var i = 0; i < list.length; i++) {
     try {
+    // console.log(list)
+    //#console.log(numbers_goml_small[list[i]])
       list_of_numbers.push(numbers_goml_small[list[i]])
 
     } catch {

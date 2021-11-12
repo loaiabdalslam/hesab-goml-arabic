@@ -33,12 +33,11 @@ var goml_gafr = new Vue({
           mixed_array = []
           for(var x = 0; x < this.chargomlsequence.length; x++){
             
-            console.log(this.chargomlsequence[x] + this.chargomlsequence_ques[x])
             mixed_array.push(this.chargomlsequence[x] + this.chargomlsequence_ques[x])
 
           }
           //console.log(mixed_array)
-          this.mixed_array = getlistofchar_backlistofnumbers(numbers_goml_small_seq,mixed_array).join(" - ")
+          this.$ref.the_answer_gafr.value = backlistofchar_getlistofnumbers(numbers_goml_small_seq,mixed_array).join(" - ")
 
 
 
